@@ -1,0 +1,37 @@
+.image{
+    width: 40em;
+    height: 40em;
+    border-radius: 30px;
+}
+
+.texto{
+    color: rgb(50, 128, 67);
+}
+
+.ancho{
+    width: 45%;
+}
+
+.text{
+    font-weight: 600;
+}
+
+.header{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 9.6em;
+    z-index: 1;
+}
+
+.espacio{
+    margin-top: 8em;
+}
+
+.verde{
+    color: green;
+}
+
+.rojo{
+    color: red;
+}

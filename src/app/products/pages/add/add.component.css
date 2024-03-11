@@ -1,0 +1,12 @@
+.header{
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    height: 9.6em;
+    z-index: 1;
+}
+
+.espacio{
+    margin-top: 8em;
+    height: 81.8vh;
+}

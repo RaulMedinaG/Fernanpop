@@ -1,0 +1,76 @@
+<div class="header">
+    <app-navbar></app-navbar>
+</div>
+<div class="bg-secondary-subtle espacio d-flex justify-content-center align-items-center">
+
+    <div class="card w-50">
+        <div class="card-body">
+            <form [formGroup]="myForm" (ngSubmit)="update(product.id!)" autocomplete="off">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Nombre</label>
+                        <div class="col-sm-9">
+
+                            <input type="text" class="form-control" formControlName="name"
+                                placeholder="{{product.name}}">
+
+                            <span *ngIf="isValidField('name')" class="form-text text-danger">
+                                {{ getFieldError('name') }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Descripción</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="description"
+                                placeholder="{{product.description}}">
+
+                            <span *ngIf="isValidField('description')" class="form-text text-danger">
+                                {{ getFieldError('description') }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Categoría</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="category"
+                                placeholder="{{product.category}}">
+
+                            <span *ngIf="isValidField('category')" class="form-text text-danger">
+                                {{ getFieldError('category') }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Precio</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="price"
+                                placeholder="{{product.price}}">
+
+                            <span *ngIf="isValidField('price')" class="form-text text-danger">
+                                {{ getFieldError('price') }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Imagen</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="image"
+                                placeholder="{{product.image}}">
+
+                            <span *ngIf="isValidField('image')" class="form-text text-danger">
+                                {{ getFieldError('image') }}
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-sucess text-white" style="background-color: rgb(78, 182, 147);">Actualizar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

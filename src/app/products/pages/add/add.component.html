@@ -1,0 +1,76 @@
+<div class="header">
+    <app-navbar></app-navbar>
+</div>
+<div class="bg-secondary-subtle espacio d-flex justify-content-center align-items-center">
+
+    <div class="card w-50">
+        <div class="card-body">
+            <form [formGroup]="myForm" (ngSubmit)="create()" autocomplete="off">
+                <div class="d-flex justify-content-center align-items-center flex-column">
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Nombre</label>
+                        <div class="col-sm-9">
+
+                            <input type="text" class="form-control" formControlName="name"
+                                placeholder="Nombre">
+
+                            <span *ngIf="isValidField('name')" class="form-text text-danger">
+                                {{ getFieldError('name') }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Descripción</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="description"
+                                placeholder="Descripción">
+
+                            <span *ngIf="isValidField('description')" class="form-text text-danger">
+                                {{ getFieldError('description') }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Categoría</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="category"
+                                placeholder="Categoría">
+
+                            <span *ngIf="isValidField('category')" class="form-text text-danger">
+                                {{ getFieldError('category') }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Precio</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="price"
+                                placeholder="Precio">
+
+                            <span *ngIf="isValidField('price')" class="form-text text-danger">
+                                {{ getFieldError('price') }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mb-3 row w-100">
+                        <label class="col-sm-3 col-form-label">Imagen</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" formControlName="image"
+                                placeholder="Imagen">
+
+                            <span *ngIf="isValidField('image')" class="form-text text-danger">
+                                {{ getFieldError('image') }}
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-succes text-white" style="background-color: rgb(78, 182, 147);">Crear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

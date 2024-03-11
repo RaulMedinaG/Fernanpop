@@ -1,0 +1,18 @@
+/* .body{
+    margin-bottom: -2em;
+} */
+
+.bordes {
+    border-color: rgb(181, 181, 181);
+}
+
+.alto {
+    padding: 1em;
+}
+
+.boton {
+    height: 3em;
+    width: 11em;
+    background-color: rgb(78, 182, 147);
+
+}

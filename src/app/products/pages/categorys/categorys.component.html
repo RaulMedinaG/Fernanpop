@@ -1,0 +1,31 @@
+<div class="header">
+    <app-navbar></app-navbar>
+</div>
+<div class="espacio">
+    <div class="d-flex">
+        <a class="texto" routerLink="../../">Inicio</a>
+        <span class="text-secondary me-2 ms-2"> > </span>
+        <span>{{category}}</span>
+    </div>
+
+    <div class="mt-4">
+        <p class="display-5 text">{{category}} de segunda mano</p>
+    </div>
+    <div class="mt-3">
+        <h2 class="text">Novedades</h2>
+    </div>
+
+    <div class="rounded mt-2 mb-1 p-1 d-flex ancho animate__animated animate__backInUp" *ngFor="let product of products; let i = index">
+        <img [routerLink]="['/products/product/',product.id]"
+            src="{{product.image}}"
+            class="me-2 image" alt="">
+        <div class="d-flex flex-column">
+            <b><span [routerLink]="['/products/product/',product.id]"> {{product.price | euroFormat}}</span></b>
+            <span class="" [routerLink]="['/products/product/',product.id]"> {{product.name | titlecase}}</span>
+            <div class="">
+                <span class="ellipsis text-secondary">{{product.description | lowercase}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
